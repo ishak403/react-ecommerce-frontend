@@ -19,7 +19,7 @@ export default function ProductDetails() {
     try {
       setLoading(true);
       const response = await fetchProductById(id);
-      setProduct(response.data);
+      setProduct(response.data.product);
     } catch (err) {
       console.error("Error fetching product:", err);
       setError("Failed to load product details");

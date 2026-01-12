@@ -8,6 +8,9 @@ const getAuthHeaders = () => {
   return token ? { Authorization: `Bearer ${token}` } : {};
 };
 
+export const searchProducts = (filters) =>
+  axios.post(`${API_URL}/products/search`, filters);
+
 export const fetchProducts = () => axios.post(`${API_URL}/products/search`, {});
 
 export const fetchProductById = (id) =>
